@@ -242,7 +242,7 @@ section {
 }
 
 .hero::before,
-.about-hero::before {
+.about-hero-bg::before {
   content: "";
   position: absolute;
   top: 0;
@@ -470,12 +470,11 @@ select.minimal {
 .rooms-btn:hover {
   color: var(--yellow-solid);
 }
-  /* Testimonials Sectin */
+/* Testimonials Sectin */
 .testimonials .heading {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 5rem;
- 
 }
 .carousel-container {
   padding: 0 30px;
@@ -564,9 +563,8 @@ select.minimal {
   left: -50px;
   top: 0;
   font-weight: 900;
- 
+
   padding: 1rem;
-  
 }
 
 .owl-carousel .owl-nav .owl-next:after {
@@ -804,7 +802,7 @@ select.minimal {
     margin-left: 1.5rem;
     width: 50%;
   }
-  .testimonial-content-container{
+  .testimonial-content-container {
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.4s ease-in-out;
@@ -827,7 +825,7 @@ select.minimal {
 */
 
 /* About Header */
-.about-hero {
+.parallax-hero {
   height: 450px;
   align-items: flex-end;
   width: 100%;
@@ -836,22 +834,22 @@ select.minimal {
   position: relative;
   z-index: 1;
 }
-.about-hero .title {
+.about-hero-bg {
+  background-image: url("./images/about_background.jpg");
+}
+.parallax-hero .title {
   font-size: 7rem;
   margin-bottom: 10rem;
 }
 .parallax {
-  background-image: url("./images/about_background.jpg");
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Intro Section */
-.intro .contact-content {
-  /* flex-wrap: wrap; */
-}
+
 .intro-wrap img {
   height: auto;
   width: 100%;
@@ -1108,4 +1106,38 @@ select.minimal {
   .stats-type {
     text-align: left;
   }
+}
+
+/* 
+                                            ========================
+                                            === CONTACT     PAGE ===
+                                            ========================
+*/
+
+/* Hero Section */
+
+.contact-hero {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+.contact-hero-bg {
+  background: url("./images/contact_background.jpg") center top no-repeat;
+  
+  
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position:fixed;
+  left: 0;
+  top: 0;
+}
+.contact-hero .container {
+  height: 100%;
+}
+.contact-hero .main-heading {
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+  text-align: center;
 }
