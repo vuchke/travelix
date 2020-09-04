@@ -552,7 +552,7 @@ select.minimal {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width:98%;
+  width: 98%;
   z-index: -1;
 }
 .owl-carousel .owl-nav .owl-prev:before {
@@ -574,7 +574,7 @@ select.minimal {
   content: "\f054";
   font-size: 20px;
   margin-left: 10px;
-  right: -50px;
+  right: -73px;
   top: 0;
   font-weight: 900;
   padding: 1rem;
@@ -1080,7 +1080,7 @@ select.minimal {
 }
 
 @media screen and (max-width: 765px) {
-  .parallax-hero .title{
+  .parallax-hero .title {
     font-size: 4.8rem;
   }
   .milestone-item {
@@ -1168,7 +1168,7 @@ select.minimal {
 }
 
 /* Contact About Section */
-.contact-about{
+.contact-about {
   padding-bottom: 0 !important;
 }
 .contact-about-wrap {
@@ -1211,11 +1211,11 @@ select.minimal {
   line-height: 2.21;
   color: #929191;
 }
-.contact-about .social-media-wrap{
+.contact-about .social-media-wrap {
   margin-top: 40px;
   margin-left: 0;
 }
-.contact-about .social-media{
+.contact-about .social-media {
   justify-content: space-around;
 }
 .contact-about .sm-link {
@@ -1232,7 +1232,7 @@ select.minimal {
   width: 250px;
   margin-top: 53px;
 }
-.contact-about-info-item{
+.contact-about-info-item {
   display: flex;
   margin-bottom: 22px;
 }
@@ -1242,32 +1242,31 @@ select.minimal {
   height: 20px;
   margin-right: 10px;
 }
-.contact-info-text{
+.contact-info-text {
   font-size: 1.4rem;
   font-weight: 400;
   color: #2e2e2e;
   line-height: 2.14;
 }
-.contact-about-info-item:hover .contact-info-text{
+.contact-about-info-item:hover .contact-info-text {
   color: var(--yellow-solid);
 }
 
 /* ====================
  === Media Queries ===
  ===================== */
- @media screen and (max-width: 1000px) {
-
+@media screen and (max-width: 1000px) {
   .contact-about-wrap {
     display: block;
     width: 80%;
     margin: 0 auto;
     padding-bottom: 20px;
   }
-  .contact-about-content{
+  .contact-about-content {
     width: 100%;
     max-width: initial;
   }
-  .contact-about-image{
+  .contact-about-image {
     margin: 0 auto;
     text-align: center;
   }
@@ -1275,29 +1274,28 @@ select.minimal {
     max-width: 50vw;
     height: auto;
   }
-  .contact-about-text{
+  .contact-about-text {
     width: 90%;
   }
   .social-media {
     justify-content: start !important;
   }
-  .contact-about-info{
+  .contact-about-info {
     padding-top: 0;
   }
- }
+}
 
- @media screen and (max-width: 600px) {
-  .contact-hero .title{
+@media screen and (max-width: 600px) {
+  .contact-hero .title {
     font-size: 4rem;
   }
-  .contact-about-wrap {   
-    width: 100%;    
-    
+  .contact-about-wrap {
+    width: 100%;
   }
   .contact-about-wrap > * {
     min-width: 0;
   }
-  .contact-about-content{
+  .contact-about-content {
     margin-left: 0;
   }
- }
+}
