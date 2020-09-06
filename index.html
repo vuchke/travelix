@@ -26,6 +26,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+    <!-- Import Vue 3 -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.24/dist/vue.global.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -218,101 +220,33 @@
       </section>
 
       <!-- Rooms Section -->
-      <section class="rooms">
+      <section class="rooms" id="rooms">
         <div class="container">
           <h5 class="section-head">
             <span class="heading">Luxurious</span>
             <span class="sub-heading">Affordable rooms</span>
           </h5>
           <div class="grid rooms-grid">
-            <div class="grid-items featured-rooms">
+            <div
+              class="grid-items featured-rooms"
+              v-for="(room,index) in rooms"
+              :key="index"
+            >
               <div class="image-wrap">
                 <img
                   loading="lazy"
                   class="room-image"
-                  src="./images/room_1.webp"
+                  :src="room.roomImg"
                   alt=""
                 />
-                <h5 class="room-name">Astro Hotel</h5>
+                <h5 class="room-name">{{ room.roomName}}</h5>
               </div>
               <div class="room-info-wrap">
                 <span class="room-price">
-                  $200
+                  ${{ room.roomPrice }}
                   <span class="per-night">Per night</span>
                 </span>
-                <p class="paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam excepturi molestiae ad error atque voluptates.
-                </p>
-                <a href="#" class="btn rooms-btn">Book now &rarr;</a>
-              </div>
-            </div>
-
-            <div class="grid-items featured-rooms">
-              <div class="image-wrap">
-                <img
-                  loading="lazy"
-                  class="room-image"
-                  src="./images/room_2.webp"
-                  alt=""
-                />
-                <h5 class="room-name">Enchanted Garden</h5>
-              </div>
-              <div class="room-info-wrap">
-                <span class="room-price">
-                  $200
-                  <span class="per-night">Per night</span>
-                </span>
-                <p class="paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam excepturi molestiae ad error atque voluptates.
-                </p>
-                <a href="#" class="btn rooms-btn">Book now &rarr;</a>
-              </div>
-            </div>
-
-            <div class="grid-items featured-rooms">
-              <div class="image-wrap">
-                <img
-                  loading="lazy"
-                  class="room-image"
-                  src="./images/room_3.webp"
-                  alt=""
-                />
-                <h5 class="room-name">The Paradise</h5>
-              </div>
-              <div class="room-info-wrap">
-                <span class="room-price">
-                  $200
-                  <span class="per-night">Per night</span>
-                </span>
-                <p class="paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam excepturi molestiae ad error atque voluptates.
-                </p>
-                <a href="#" class="btn rooms-btn">Book now &rarr;</a>
-              </div>
-            </div>
-
-            <div class="grid-items featured-rooms">
-              <div class="image-wrap">
-                <img
-                  loading="lazy"
-                  class="room-image"
-                  src="./images/room_4.webp"
-                  alt=""
-                />
-                <h5 class="room-name">Luxor</h5>
-              </div>
-              <div class="room-info-wrap">
-                <span class="room-price">
-                  $200
-                  <span class="per-night">Per night</span>
-                </span>
-                <p class="paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam excepturi molestiae ad error atque voluptates.
-                </p>
+                <p class="paragraph">{{ room.roomDescription}}</p>
                 <a href="#" class="btn rooms-btn">Book now &rarr;</a>
               </div>
             </div>
@@ -333,7 +267,7 @@
                 </div>
                 <div class="testimonial-container">
                   <div class="testimonial-icon">
-                    <img src="./images/island_t.we" alt="" />
+                    <img src="./images/island_t.png" alt="" />
                   </div>
                   <div class="testimonial-content-container">
                     <div class="testimonial-info">
@@ -578,7 +512,11 @@
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
     ></script>
+    <!-- carousel JS -->
     <script src="carousel.js"></script>
+    <!-- Vue JS -->
+    <script src="appVue.js"></script>
+    <!-- mainJS -->
     <script src="main.js"></script>
   </body>
 </html>

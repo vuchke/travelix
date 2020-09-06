@@ -3,11 +3,12 @@
 let header = document.querySelector(".header");
 let hamburger = document.querySelector(".hamburger-menu");
 
+// nav shrink on scroll
 window.addEventListener("scroll", () => {
   let windowPosition = window.scrollY > 500;
   header.classList.toggle("active", windowPosition);
 });
-
+// open mob nav
 hamburger.addEventListener("click", () => {
   header.classList.toggle("menu-open");
 });
@@ -16,7 +17,7 @@ hamburger.addEventListener("click", () => {
 const bars = document.querySelectorAll(".stats-bar-perc");
 const statValue = document.querySelectorAll(".stat-value");
 let barSection = document.querySelector(".stats-content");
-let done = 0 
+let done = 0;
 
 function runBars() {
   bars.forEach((bar) => {
@@ -39,20 +40,16 @@ function runBars() {
         setTimeout(countValue, 20);
       } else {
         value.innerText = target;
-        done = 1 
+        done = 1;
       }
     };
     countValue();
   });
 }
 
-// let options = {
-//   rootMargin: "0px 0px -300px 0px",
-// };
-
 const sectionBarObserver = new IntersectionObserver(
   (entries) => {
-    if (entries[0].isIntersecting && done !==1) {
+    if (entries[0].isIntersecting && done !== 1) {
       runBars();
     }
   },
@@ -64,10 +61,8 @@ if (barSection) {
   sectionBarObserver.observe(barSection);
 }
 
-
 // counters
 const counters = document.querySelectorAll(".counter");
-
 
 function runCounter() {
   counters.forEach((counter) => {
@@ -75,7 +70,6 @@ function runCounter() {
 
     let target = +counter.dataset.target;
     let speed = +counter.dataset.speed;
-   
 
     let countIt = function () {
       let displayedCount = +counter.innerText;
@@ -84,7 +78,6 @@ function runCounter() {
         setTimeout(countIt, 50);
       } else {
         counter.innerText = target;
-        
       }
     };
     countIt();
@@ -92,9 +85,7 @@ function runCounter() {
 }
 
 let counterSection = document.querySelector(".milestones");
-// let options = {
-//   rootMargin: "0px 0px -300px 0px",
-// };
+
 const sectionCounterObserver = new IntersectionObserver(
   (entries) => {
     if (entries[0].isIntersecting) {
@@ -108,5 +99,4 @@ const sectionCounterObserver = new IntersectionObserver(
 
 if (counterSection) {
   sectionCounterObserver.observe(counterSection);
-
 }
